@@ -45,6 +45,7 @@ coordinates = useful.positions.cursor(event, parent);
 Returns the position of the cursor relative to the window or an optional parent object.
 
 **event : {event object}** - An event object originating from a mouse or touch interaction.
+
 **parent : {DOM object}** - Optional DOM object to use as reference for the cursor position.
 
 ## License
