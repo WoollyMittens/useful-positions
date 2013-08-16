@@ -14,6 +14,8 @@ This include can be added to the header or placed inline before the script is in
 
 ## Functions
 
+### window
+
 ```javascript
 coordinates = useful.positions.window();
 ```
@@ -21,6 +23,8 @@ coordinates = useful.positions.window();
 Returns the dimensions of the window.
 
 **coordinates : {object}** - An object containing coordinates.x and coordinates.y.
+
+### document
 
 ```javascript
 coordinates = useful.positions.document(element);
@@ -30,6 +34,8 @@ Returns the scrolled position of the document, or any given element with scrolli
 
 **element : {DOM object}** - A DOM object in the document.
 
+### object
+
 ```javascript
 coordinates = useful.positions.object(element);
 ```
@@ -37,6 +43,8 @@ coordinates = useful.positions.object(element);
 Returns the position of an object in the first parent with relative positioning.
 
 **element : {DOM object}** - A DOM object in the document.
+
+### cursor
 
 ```javascript
 coordinates = useful.positions.cursor(event, parent);
