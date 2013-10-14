@@ -15,12 +15,19 @@
 	var positions = positions || {};
 
 	// find the dimensions of the window
-	positions.window = function () {
+	positions.window = function (parent) {
 		// define a position object
 		var dimensions = {x : 0, y : 0};
-		// find the current dimensions of the window
-		dimensions.x = window.innerWidth || document.body.clientWidth;
-		dimensions.y = window.innerHeight || document.body.clientHeight;
+		// if an alternative was given to use as a window
+		if (parent && parent !== window) {
+			// find the current dimensions of surrogate window
+			dimensions.x = parent.offsetWidth;
+			dimensions.y = parent.offsetHeight;
+		} else {
+			// find the current dimensions of the window
+			dimensions.x = window.innerWidth || document.body.clientWidth;
+			dimensions.y = window.innerHeight || document.body.clientHeight;
+		}
 		// return the object
 		return dimensions;
 	};
@@ -30,7 +37,7 @@
 		// define a position object
 		var position = {x : 0, y : 0};
 		// find the current position in the document
-		if (parent) {
+		if (parent && parent !== window) {
 			position.x = parent.scrollLeft;
 			position.y = parent.scrollTop;
 		} else {
