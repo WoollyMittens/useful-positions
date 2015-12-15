@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>useful-positions.js: A library of useful functions to ease working with screen positions.</title>
+		<style>
+			html { font-family:Sans-Serif; font-size:75%; height:100%; }
+			body { _height:100%; line-height:180%; margin:0; min-height:100%; padding:1%; }
+			.example { max-width:960px; margin:0 auto; padding:0; clear:both; }
+			.example > article, .example > aside { width:98%; padding:2%; }
+			.example-left > article, .example-left > aside { width:48%; padding:1%; float:left; }
+			.example-right > article, .example-right > aside { width:48%; padding:1%; float:right; }
+		</style>
+		<!--[if lte IE 9]>
+			<meta http-equiv="imagetoolbar" content="no"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<section class="example example-right">
+			<article>
+				<h2>Screen Positions Library</h2>
+				<p>A library of useful functions to ease working with screen positions.</p>
+				<p><a class="button downloadButton" href="http://github.com/WoollyMittens/useful-positions" target="_blank">Download (GitHub)</a></p>
+			</article>
+			<aside>
+
+				<!-- Cut below this -->
+				<style>@import url("./css/useful-positions.css");</style>
+				<script src="./js/useful-positions.js"></script>
+				<div class="useful-tests">
+					<p>
+						The output of these tests is reported using <strong>console.log();</strong>.<br/>
+						Be sure to open the developer console first.
+					</p>
+					<dl>
+						<dt>useful.positions</dt>
+						<dd>
+							<div id="position-test">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<button onclick="console.log(useful.positions.window());">Report window dimensions</button><br/>
+						</dd>
+						<dd>
+							<button onclick="console.log(useful.positions.document(positionTest));">Report scroll position</button><br/>
+						</dd>
+						<dd>
+							<button onclick="console.log(useful.positions.object(positionTest));">Report object position</button><br/>
+						</dd>
+						<dd>
+							<button id="position-test-button" onclick="console.log(useful.positions.cursor(event, positionTestButton));">Report click position</button><br/>
+							<script>
+							//<!--
+								var positionTest = document.getElementById('position-test');
+								var positionTestButton = document.getElementById('position-test-button');
+							//-->
+							</script>
+						</dd>
+					</dl>
+				</div>
+				<!-- Cut above this -->
+
+			</aside>
+		</section>
+	</body>
+</html>
