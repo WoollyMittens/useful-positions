@@ -2,7 +2,7 @@
 
 A library of useful functions to ease working with screen positions.
 
-Try the <a href="http://www.woollymittens.nl/useful/default.php?url=useful-positions">tests</a>.
+Try the <a href="http://www.woollymittens.nl/default.php?url=useful-positions">tests</a>.
 
 ## How to include the script
 
