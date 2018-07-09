@@ -1,4 +1,4 @@
-# useful.positions.js: Screen Positions Library
+# positions.js: Screen Positions Library
 
 A library of useful functions to ease working with screen positions.
 
@@ -9,15 +9,7 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-positions">t
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-positions.js"></script>
-```
-
-To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*.
-
-```html
-<!--[if lte IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<script src="./js/positions.js"></script>
 ```
 
 ## How to control the script
@@ -25,7 +17,7 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 ### window
 
 ```javascript
-coordinates = useful.positions.window();
+coordinates = positions.window();
 ```
 
 Returns the dimensions of the window.
@@ -35,7 +27,7 @@ Returns the dimensions of the window.
 ### document
 
 ```javascript
-coordinates = useful.positions.document(element);
+coordinates = positions.document(element);
 ```
 
 Returns the scrolled position of the document, or any given element with scrolling enabled.
@@ -45,7 +37,7 @@ Returns the scrolled position of the document, or any given element with scrolli
 ### object
 
 ```javascript
-coordinates = useful.positions.object(element);
+coordinates = positions.object(element);
 ```
 
 Returns the position of an object in the first parent with relative positioning.
@@ -55,7 +47,7 @@ Returns the position of an object in the first parent with relative positioning.
 ### cursor
 
 ```javascript
-coordinates = useful.positions.cursor(event, parent);
+coordinates = positions.cursor(event, parent);
 ```
 
 Returns the position of the cursor relative to the window or an optional parent object.
