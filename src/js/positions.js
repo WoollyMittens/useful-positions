@@ -98,6 +98,5 @@ var positions = {
 };
 
 // return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = positions;
-}
+if (typeof define != 'undefined') define(['positions'], function () { return positions });
+if (typeof module != 'undefined') module.exports = positions;
