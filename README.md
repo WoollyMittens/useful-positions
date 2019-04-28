@@ -9,7 +9,23 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-positions">t
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/positions.js"></script>
+<script src="js/positions.js"></script>
+```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'js/positions.js'
+], function(positions) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var positions = require('js/positions.js');
 ```
 
 ## How to control the script
